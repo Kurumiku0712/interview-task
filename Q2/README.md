@@ -4,17 +4,17 @@ Node v22.13.1
 
 ```
 git clone
-cd Q1
+cd Q2
 ```
 
 ```
-node checkConnection.js
-```
-
+npm install
+npm run dev
 or
-
-```
-for ($i=1; $i -le 5; $i++) { node checkConnection.js }
+node server.js
 ```
 
-(run  5 times)
+To fetch categories from the API:
+```
+node fetchCategories.js
+```
