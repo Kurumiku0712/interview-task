@@ -9,15 +9,7 @@
 import { useCallback } from "react";
 import { TreeSelect } from "antd";
 
-/**
- * Renders the Ant Design TreeSelect using the category tree data from Redux.
- *
- * @param {{ categoryTree: object }} props
- * @prop {object} categoryTree - The category tree data from Redux.
- *
- * @returns {ReactElement} The rendered TreeSelect component.
- */
-
+//Transform the category tree data into a format that can be used by the TreeSelect component.
 export default function CategoryTreeSelect({ categoryTree }) {
   // Recursive transform function
   const transformNode = useCallback((node) => {
@@ -42,7 +34,7 @@ export default function CategoryTreeSelect({ categoryTree }) {
   return (
     <TreeSelect
       style={{ width: 800 }}
-      dropdownStyle={{ maxHeight: 600, overflow: "auto" }}
+      dropdownStyle={{ maxHeight: 1000, overflow: "auto" }}
       treeData={treeData}
       placeholder="Please select"
       treeDefaultExpandAll
